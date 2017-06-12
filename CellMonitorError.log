@@ -1,0 +1,151 @@
+
+
+FATAL - thread: AWT-EventQueue-2 - 2017-06-09 14:59:03,235
+com.tek.mfg.cellmonitor.gui.AppLogger.handleError(AppLogger.java:58)
+Cell Monitor Exception
+Exception in cell monitor app setup parameters are com.tek.mfg.cellmonitor.bo.CellMonitorParameters@5afaaef7
+java.lang.Exception: java.lang.NumberFormatException: For input string: ""
+	at com.tek.mfg.cellmonitor.gui.OperatorInterface$MyExceptionHandler.uncaughtException(OperatorInterface.java:379)
+	at java.lang.ThreadGroup.uncaughtException(Unknown Source)
+	at java.lang.ThreadGroup.uncaughtException(Unknown Source)
+	at java.awt.EventDispatchThread.processException(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.tek.mfg.cellmonitor.gui.ManualConfigurationPanel.persistParameters(ManualConfigurationPanel.java:546)
+	at com.tek.mfg.cellmonitor.gui.ManualConfigurationPanel.access$500(ManualConfigurationPanel.java:40)
+	at com.tek.mfg.cellmonitor.gui.ManualConfigurationPanel$4.actionPerformed(ManualConfigurationPanel.java:369)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	... 6 more
+
+
+FATAL - thread: pool-5-thread-1 - 2017-06-12 13:10:37,418
+com.tek.mfg.cellmonitor.gui.AppLogger.handleError(AppLogger.java:58)
+Cell Monitor Exception
+Error during pollOracleMfg routine. Setup params are: com.tek.mfg.cellmonitor.bo.CellMonitorParameters@270608f1
+java.lang.IllegalArgumentException: Application environment has not been set on virtual machine. Expecting environment variable: webapp_env to have one of the following values: junit, localhost, sandbox, dev,test, prod
+	at com.tek.mfg.common.AppEnv.getAppEnv(AppEnv.java:71)
+	at com.tek.mfg.common.AppEnv.isProdEnv(AppEnv.java:51)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.initialize(OracleMfgDataSource.java:37)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.<init>(OracleMfgDataSource.java:26)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.getInstance(OracleMfgDataSource.java:31)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.loggingError(OracleMfgDAO.java:201)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.getActualDone(OracleMfgDAO.java:369)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.calculateValueFromDB(HHAvgApplicationModel.java:107)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.access$100(HHAvgApplicationModel.java:16)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel$1.run(HHAvgApplicationModel.java:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+FATAL - thread: pool-5-thread-1 - 2017-06-12 13:10:58,891
+com.tek.mfg.cellmonitor.gui.AppLogger.handleError(AppLogger.java:58)
+Cell Monitor Exception
+Error during pollOracleMfg routine. Setup params are: com.tek.mfg.cellmonitor.bo.CellMonitorParameters@24c60d83
+java.lang.IllegalArgumentException: Application environment has not been set on virtual machine. Expecting environment variable: webapp_env to have one of the following values: junit, localhost, sandbox, dev,test, prod
+	at com.tek.mfg.common.AppEnv.getAppEnv(AppEnv.java:71)
+	at com.tek.mfg.common.AppEnv.isProdEnv(AppEnv.java:51)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.initialize(OracleMfgDataSource.java:37)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.<init>(OracleMfgDataSource.java:26)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.getInstance(OracleMfgDataSource.java:31)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.loggingError(OracleMfgDAO.java:201)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.getActualDone(OracleMfgDAO.java:369)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.calculateValueFromDB(HHAvgApplicationModel.java:107)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.access$100(HHAvgApplicationModel.java:16)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel$1.run(HHAvgApplicationModel.java:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+FATAL - thread: pool-4-thread-1 - 2017-06-12 14:45:53,094
+com.tek.mfg.cellmonitor.gui.AppLogger.handleError(AppLogger.java:58)
+Cell Monitor Exception
+Error during pollOracleMfg routine. Setup params are: com.tek.mfg.cellmonitor.bo.CellMonitorParameters@7be4f4bd
+java.lang.IllegalArgumentException: Application environment has not been set on virtual machine. Expecting environment variable: webapp_env to have one of the following values: junit, localhost, sandbox, dev,test, prod
+	at com.tek.mfg.common.AppEnv.getAppEnv(AppEnv.java:71)
+	at com.tek.mfg.common.AppEnv.isProdEnv(AppEnv.java:51)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.initialize(OracleMfgDataSource.java:37)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.<init>(OracleMfgDataSource.java:26)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.getInstance(OracleMfgDataSource.java:31)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.loggingError(OracleMfgDAO.java:201)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.getActualDone(OracleMfgDAO.java:369)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.calculateValueFromDB(HHAvgApplicationModel.java:107)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.access$100(HHAvgApplicationModel.java:16)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel$1.run(HHAvgApplicationModel.java:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+FATAL - thread: pool-4-thread-1 - 2017-06-12 14:47:48,401
+com.tek.mfg.cellmonitor.gui.AppLogger.handleError(AppLogger.java:58)
+Cell Monitor Exception
+Error during pollOracleMfg routine. Setup params are: com.tek.mfg.cellmonitor.bo.CellMonitorParameters@24109821
+java.lang.IllegalArgumentException: Application environment has not been set on virtual machine. Expecting environment variable: webapp_env to have one of the following values: junit, localhost, sandbox, dev,test, prod
+	at com.tek.mfg.common.AppEnv.getAppEnv(AppEnv.java:71)
+	at com.tek.mfg.common.AppEnv.isProdEnv(AppEnv.java:51)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.initialize(OracleMfgDataSource.java:37)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.<init>(OracleMfgDataSource.java:26)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDataSource.getInstance(OracleMfgDataSource.java:31)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.loggingError(OracleMfgDAO.java:201)
+	at com.tek.mfg.cellmonitor.dao.OracleMfgDAO.getActualDone(OracleMfgDAO.java:369)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.calculateValueFromDB(HHAvgApplicationModel.java:107)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel.access$100(HHAvgApplicationModel.java:16)
+	at com.tek.mfg.cellmonitor.gui.HHAvgApplicationModel$1.run(HHAvgApplicationModel.java:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
